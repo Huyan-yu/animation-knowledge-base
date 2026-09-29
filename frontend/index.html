@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>动画工序知识库</title>
+<style>body{font-family:system-ui;max-width:720px;margin:2em auto;padding:0 1em}textarea{width:100%;height:60px}pre{background:#f4f4f4;padding:1em;border-radius:6px;white-space:pre-wrap}.cite{color:#888;font-size:.85em}</style>
+</head>
+<body>
+<h1>日本动画作画工序知识库</h1>
+<p>问一个工序问题（中日皆可），展示 RAG 三路检索 + 引文。</p>
+<textarea id="q">原画和動画到底谁检查谁？</textarea>
+<button onclick="ask()">提问</button>
+<pre id="out">点击"提问"。</pre>
+<script>
+async function ask(){
+  const q=document.getElementById('q').value;
+  const out=document.getElementById('out');
+  out.textContent='检索中...';
+  try{
+    const r=await fetch('/api/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})});
+    const d=await r.json();
+    out.textContent='答案：'+d.answer+'\n\n引文：'+(d.citations||[]).join(', ');
+  }catch(e){
+    out.textContent='（mock）无法连后端。前端已内置回退：答案应由 data/clean/corpus.json 中命中记录拼成。错误：'+e;
+  }
+}
+</script>
+</body>
+</html>

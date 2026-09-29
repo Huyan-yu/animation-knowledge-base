@@ -1,0 +1,47 @@
+{
+  "rows": [
+    {
+      "q": "原画和動画到底谁检查谁？",
+      "recall@5": 1.0,
+      "faithfulness": 1.0,
+      "completeness": 1.0,
+      "total": 100.0,
+      "pass": true
+    },
+    {
+      "q": "ゲラ（原画）是由谁绘制的？",
+      "recall@5": 1.0,
+      "faithfulness": 1.0,
+      "completeness": 1.0,
+      "total": 100.0,
+      "pass": true
+    },
+    {
+      "q": "摄影合成在哪个工序之后进行？",
+      "recall@5": 0.0,
+      "faithfulness": 1.0,
+      "completeness": 0.5,
+      "total": 45.0,
+      "pass": false
+    },
+    {
+      "q": "作画监督的职责是什么？",
+      "recall@5": 0.0,
+      "faithfulness": 1.0,
+      "completeness": 0.0,
+      "total": 30.0,
+      "pass": false
+    },
+    {
+      "q": "分镜（コンテ）由谁决定？",
+      "recall@5": 1.0,
+      "faithfulness": 1.0,
+      "completeness": 1.0,
+      "total": 100.0,
+      "pass": true
+    }
+  ],
+  "avg_total": 75.0,
+  "pass_rate": 0.6,
+  "mode": "mock（忠实度为近似判定）"
+}

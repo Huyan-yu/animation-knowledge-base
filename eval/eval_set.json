@@ -1,0 +1,7 @@
+[
+  {"question": "原画和動画到底谁检查谁？", "gold_ids": ["R0002", "R0003"], "gold_facts": ["動画", "作画検査", "原画"]},
+  {"question": "ゲラ（原画）是由谁绘制的？", "gold_ids": ["R0001"], "gold_facts": ["原画师"]},
+  {"question": "摄影合成在哪个工序之后进行？", "gold_ids": ["R0007"], "gold_facts": ["原画", "背景", "動画", "合成"]},
+  {"question": "作画监督的职责是什么？", "gold_ids": ["R0005", "R0011"], "gold_facts": ["基准", "审核"]},
+  {"question": "分镜（コンテ）由谁决定？", "gold_ids": ["R0006"], "gold_facts": ["导演"]}
+]

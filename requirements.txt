@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+langchain
+faiss-cpu
+sentence-transformers  # bge-m3
+whoosh
+jieba
+networkx
+paddleocr    # 可选，PDF OCR
+openai       # DeepSeek 兼容 API
